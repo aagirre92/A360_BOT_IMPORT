@@ -81,20 +81,20 @@ def upload_file(file_path):
                 'actionIfExisting': 'SKIP',
                 'publicWorkspace': True
             }
-            print("Proceeding to import: " + filename)
-            logger.info("Proceeding to import: " + filename)
+            print("Proceeding to import " + filename)
+            logger.info("Proceeding to import " + filename)
             response = requests.post(url, headers=headers, files=files, data=data, verify=False)
             response.raise_for_status()  # throw error if response is not 20x
-            print(f"Status for {filename} import: " + str(response.status_code))
-            logger.info(f"Status for {filename} import: " + str(response.status_code))
+            print(f"Status for {filename} import = " + str(response.status_code))
+            logger.info(f"Status for {filename} import = " + str(response.status_code))
             return response
     except Exception as e:
-        print(f"Could not import {filename}. Error: {str(e)}")
-        logger.error(f"Could not import {filename}. Error: {str(e)}")
+        print(f"Could not import {filename}. Error {str(e)}")
+        logger.error(f"Could not import {filename}. Error {str(e)}")
 
 
 def main(folder_path):
-    logger.info("Starting bot import from this folder: " + folder_path)
+    logger.info("Starting bot import from folder " + folder_path)
     file_paths = [os.path.join(folder_path, filename) for filename in os.listdir(folder_path)]
     # One by one
     # for file in file_paths:
@@ -111,6 +111,5 @@ def main(folder_path):
 if __name__ == '__main__':
     logger.info("### START ###")
     token = get_token()
-    logger.info("Starting import from folder: " + folder_path)
     main(folder_path=folder_path)
     logger.info("### END ###")
