@@ -11,4 +11,4 @@ You must provide 4 parameters:
 
 ```
 # LOGS
-This script will create a log file under users's Document folder named _A360_BOT_IMPORT_LOGS_dd-MMM-yyyy.log_
+This script will create a log file under users's Documents folder named _A360_BOT_IMPORT_LOGS_dd-MMM-yyyy.log_
