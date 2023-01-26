@@ -1,5 +1,7 @@
 # INTRODUCTION
 This script allows you to import bots from certain folder to your A360 Control Room
+
+**THIS SCRIPT USES MULTI-THREAD FOR IMPORTS**
 # USAGE (powershell)
 You must provide 4 parameters:
 * **cr_url**: Full Control Room URL, e.g. https://aa1-app2019.iacc.epam.com
