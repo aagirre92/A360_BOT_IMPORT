@@ -14,3 +14,6 @@ You must provide 4 parameters:
 ```
 # LOGS
 This script will create a log file under users's Documents folder named _A360_BOT_IMPORT_LOGS_dd-MMM-yyyy.log_
+
+# License
+This project is licensed under the GNU Public License
